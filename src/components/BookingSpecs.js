@@ -22,6 +22,7 @@ const BookingSpecs = () => {
    type="text"
  />
 </form>
+<button>Confirm</button>
 </div>
     )
 }
