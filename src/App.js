@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Calendar from 'react-calendar';
 import DayCalendar from './components/DayCalendar';
-import BookingSpecs from './components/BookingSpecs';
+// import BookingSpecs from './components/BookingSpecs';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import {Button} from 'react-bootstrap'
 //import DateSystem from './DateSystem';
@@ -35,7 +35,7 @@ class App extends Component{
             </div>
             
             <div>
-            <BookingSpecs/>
+            {/* <BookingSpecs/> */}
             </div>
           {/* <Calender/> */}
           {/* <RoomOne/> */}
