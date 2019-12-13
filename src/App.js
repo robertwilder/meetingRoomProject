@@ -1,5 +1,9 @@
 import React, {Component} from 'react';
-import Calendar from 'react-calendar'
+import Calendar from 'react-calendar';
+import DayCalendar from './components/DayCalendar';
+// import BookingSpecs from './components/BookingSpecs';
+import 'bootstrap/dist/css/bootstrap.min.css';
+// import {Button} from 'react-bootstrap'
 //import DateSystem from './DateSystem';
 
 class App extends Component{
@@ -25,6 +29,13 @@ class App extends Component{
                   onChange={this.onChange}
                   value={this.state.date}
                 />
+            </div>
+            <div>
+            <DayCalendar/>
+            </div>
+            
+            <div>
+            {/* <BookingSpecs/> */}
             </div>
           {/* <Calender/> */}
           {/* <RoomOne/> */}
