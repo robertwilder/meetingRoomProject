@@ -1,131 +1,263 @@
 // import React, { Component } from "react"
 import Table from 'react-bootstrap/Table'
 import BookingSpecs from './BookingSpecs'
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 
 
 
 export default class DayCalendar extends Component {
 
     state = {
-        BookingSpecs : false,
-        clickOn : true
+        BookingSpecs: false,
+        clickOn: true,
+        currentTime: '',
+        currentTime2: '',
+        currentTime3: '',
+        showForm: false,
+        currentPerson: "",
+        currentPerson2: "",
+        currentPerson3: "",
+        room1: [
+            "", //8:00
+            "", //8:30
+            "", 
+            "",
+            "",
+            "",
+            "", //11:00
+            "",
+            "", //12:00
+            "",
+            "", //8:00
+            "", //8:30
+            "",
+            "",
+            "",
+            "",
+            "", //16:30
+            "", //17:00
+        ],
+        room2: [
+            "", //8:00
+            "", //8:30
+            "", 
+            "",
+            "",
+            "",
+            "", //11:00
+            "",
+            "", //12:00
+            "",
+            "", //8:00
+            "", //8:30
+            "",
+            "",
+            "",
+            "",
+            "", //16:30
+            "", //17:00
+        ],
+        room3: [
+            "", //8:00
+            "", //8:30
+            "", 
+            "",
+            "",
+            "",
+            "", //11:00
+            "",
+            "", //12:00
+            "",
+            "", //8:00
+            "", //8:30
+            "",
+            "",
+            "",
+            "",
+            "", //16:30
+            "", //17:00
+        ]
+
     }
 
-    addBookingSpecs = () => {
-        this.setState({BookingSpecs:true, clickOn:false})
+    addBookingSpecs = (slotIndex) => {
+        this.setState({ 
+            BookingSpecs: true, 
+            clickOn: false, 
+            currentTime: slotIndex,
+            // currentTime2: slotIndex, 
+            // currentTime3: slotIndex, 
+            showForm: true 
+        });
+    }
+    addBookingSpecs2 = (slotIndex) => {
+        this.setState({ 
+            BookingSpecs: true, 
+            clickOn: false,
+            currentTime2: slotIndex,
+            showForm: true 
+        });
+    }
+    addBookingSpecs3 = (slotIndex) => {
+        this.setState({ 
+            BookingSpecs: true, 
+            clickOn: false,
+            currentTime3: slotIndex,
+            showForm: true 
+        });
     }
 
     initialStateHandler = () => {
-        this.setState({BookingSpecs:false, clickOn:true})
+        this.setState({ BookingSpecs: false, clickOn: true })
     }
 
 
+    handleInputChange = (event) => {
+        event.preventDefault()
+        console.log(event)
+        console.log(event.target.name)
+        console.log(event.target.value)
+        this.setState({
+            currentPerson: event.target.value,
+            currentPerson2: event.target.value,
+            currentPerson3: event.target.value
+        })
+    
+    }
+
+    hideForm = () => {
+        const newRoom1 = this.state.room1;
+        const newRoom2 = this.state.room2;
+        const newRoom3 = this.state.room3;
+
+        newRoom1[this.state.currentTime] = this.state.currentPerson
+        newRoom2[this.state.currentTime2] = this.state.currentPerson2
+        newRoom3[this.state.currentTime3] = this.state.currentPerson3
+
+        this.setState({
+            showForm: false,
+            room1: newRoom1,
+            room2: newRoom2,
+            room3: newRoom3
+        })
+        console.log("CLICked");
+    }
+  
+
+
     render() {
-        if (this.state.clickOn ===true) {
-            
+        console.log(this.state.currentPerson);
+        console.log(this.state.currentPerson2);
+        console.log(this.state.currentTime);
+        console.log(this.state.currentTime2);
+        
+        if (!this.state.showForm) {
+
             return (
                 <Table striped bordered>
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>8:00</th>
-            <th>8:30</th>
-            <th>9:00</th>
-            <th>9:30</th>
-            <th>10:00</th>
-            <th>10:30</th>
-            <th>11:00</th>
-            <th>11:30</th>
-            <th>12:00</th>
-            <th>12:30</th>
-            <th>13:00</th>
-            <th>13:30</th>
-            <th>14:00</th>
-            <th>14:30</th>
-            <th>15:00</th>
-            <th>15:30</th>
-            <th>16:00</th>
-            <th>16:30</th>
-            <th>17:00</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td >Room 1</td>
-            <td onClick={this.addBookingSpecs}>Mark</td>
-            {/* <td onClick={() => this.addBookingSpecs()}>Mark</td> */}
-            <td onClick={this.addBookingSpecs}>Otto</td>
-            <td onClick={this.addBookingSpecs}>@mdo</td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-          </tr>
-          <tr>
-            <td>Room 2</td>
-            <td onClick={this.addBookingSpecs}>Jacob</td>
-            <td onClick={this.addBookingSpecs}>Thorn</td>
-            <td onClick={this.addBookingSpecs}>@fat</td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-          </tr>
-          <tr>
-            <td>Room 3</td>
-            {/* <td colSpan="2">Larry the Bird</td> */}
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}>@twitter</td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-            <td onClick={this.addBookingSpecs}></td>
-          </tr>
-        </tbody>
-      </Table>
-   
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>8:00</th>
+                            <th>8:30</th>
+                            <th>9:00</th>
+                            <th>9:30</th>
+                            <th>10:00</th>
+                            <th>10:30</th>
+                            <th>11:00</th>
+                            <th>11:30</th>
+                            <th>12:00</th>
+                            <th>12:30</th>
+                            <th>13:00</th>
+                            <th>13:30</th>
+                            <th>14:00</th>
+                            <th>14:30</th>
+                            <th>15:00</th>
+                            <th>15:30</th>
+                            <th>16:00</th>
+                            <th>16:30</th>
+                            <th>17:00</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td >Room 1</td>
+                            <td onClick={() => this.addBookingSpecs(0)}>{this.state.room1[0]}</td>
+                            <td onClick={() => this.addBookingSpecs(1)}>{this.state.room1[1]}</td>
+                            <td onClick={() => this.addBookingSpecs(2)}>{this.state.room1[2]}</td>
+                            <td onClick={() => this.addBookingSpecs(3)}>{this.state.room1[3]}</td>
+                            <td onClick={() => this.addBookingSpecs(4)}>{this.state.room1[4]}</td>
+                            <td onClick={() => this.addBookingSpecs(5)}>{this.state.room1[5]}</td>
+                            <td onClick={() => this.addBookingSpecs(6)}>{this.state.room1[6]}</td>
+                            <td onClick={() => this.addBookingSpecs(7)}>{this.state.room1[7]}</td>
+                            <td onClick={() => this.addBookingSpecs(8)}>{this.state.room1[8]}</td>
+                            <td onClick={() => this.addBookingSpecs(9)}>{this.state.room1[9]}</td>
+                            <td onClick={() => this.addBookingSpecs(10)}>{this.state.room1[10]}</td>
+                            <td onClick={() => this.addBookingSpecs(11)}>{this.state.room1[11]}</td>
+                            <td onClick={() => this.addBookingSpecs(12)}>{this.state.room1[12]}</td>
+                            <td onClick={() => this.addBookingSpecs(13)}>{this.state.room1[13]}</td>
+                            <td onClick={() => this.addBookingSpecs(14)}>{this.state.room1[14]}</td>
+                            <td onClick={() => this.addBookingSpecs(15)}>{this.state.room1[15]}</td>
+                            <td onClick={() => this.addBookingSpecs(16)}>{this.state.room1[16]}</td>
+                            <td onClick={() => this.addBookingSpecs(17)}>{this.state.room1[17]}</td>
+                            <td onClick={() => this.addBookingSpecs(18)}>{this.state.room1[18]}</td>
+                        </tr>
+                        <tr>
+                            <td>Room 2</td>
+                            <td onClick={() => this.addBookingSpecs2(0)}>{this.state.room2[0]}</td>
+                            <td onClick={() => this.addBookingSpecs2(1)}>{this.state.room2[1]}</td>
+                            <td onClick={() => this.addBookingSpecs2(2)}>{this.state.room2[2]}</td>
+                            <td onClick={() => this.addBookingSpecs2(3)}>{this.state.room2[3]}</td>
+                            <td onClick={() => this.addBookingSpecs2(4)}>{this.state.room2[4]}</td>
+                            <td onClick={() => this.addBookingSpecs2(5)}>{this.state.room2[5]}</td>
+                            <td onClick={() => this.addBookingSpecs2(6)}>{this.state.room2[6]}</td>
+                            <td onClick={() => this.addBookingSpecs2(7)}>{this.state.room2[7]}</td>
+                            <td onClick={() => this.addBookingSpecs2(8)}>{this.state.room2[8]}</td>
+                            <td onClick={() => this.addBookingSpecs2(9)}>{this.state.room2[9]}</td>
+                            <td onClick={() => this.addBookingSpecs2(10)}>{this.state.room2[10]}</td>
+                            <td onClick={() => this.addBookingSpecs2(11)}>{this.state.room2[11]}</td>
+                            <td onClick={() => this.addBookingSpecs2(12)}>{this.state.room2[12]}</td>
+                            <td onClick={() => this.addBookingSpecs2(13)}>{this.state.room2[13]}</td>
+                            <td onClick={() => this.addBookingSpecs2(14)}>{this.state.room2[14]}</td>
+                            <td onClick={() => this.addBookingSpecs2(15)}>{this.state.room2[15]}</td>
+                            <td onClick={() => this.addBookingSpecs2(16)}>{this.state.room2[16]}</td>
+                            <td onClick={() => this.addBookingSpecs2(17)}>{this.state.room2[17]}</td>
+                            <td onClick={() => this.addBookingSpecs2(18)}>{this.state.room2[18]}</td>
+                        </tr>
+                        <tr>
+                            <td>Room 3</td>
+                            {/* <td colSpan="2">Larry the Bird</td> */}
+                            <td onClick={() => this.addBookingSpecs3(0)}>{this.state.room3[0]}</td>
+                            <td onClick={() => this.addBookingSpecs3(1)}>{this.state.room3[1]}</td>
+                            <td onClick={() => this.addBookingSpecs3(2)}>{this.state.room3[2]}</td>
+                            <td onClick={() => this.addBookingSpecs3(3)}>{this.state.room3[3]}</td>
+                            <td onClick={() => this.addBookingSpecs3(4)}>{this.state.room3[4]}</td>
+                            <td onClick={() => this.addBookingSpecs3(5)}>{this.state.room3[5]}</td>
+                            <td onClick={() => this.addBookingSpecs3(6)}>{this.state.room3[6]}</td>
+                            <td onClick={() => this.addBookingSpecs3(7)}>{this.state.room3[7]}</td>
+                            <td onClick={() => this.addBookingSpecs3(8)}>{this.state.room3[8]}</td>
+                            <td onClick={() => this.addBookingSpecs3(9)}>{this.state.room3[9]}</td>
+                            <td onClick={() => this.addBookingSpecs3(10)}>{this.state.room3[10]}</td>
+                            <td onClick={() => this.addBookingSpecs3(11)}>{this.state.room3[11]}</td>
+                            <td onClick={() => this.addBookingSpecs3(12)}>{this.state.room3[12]}</td>
+                            <td onClick={() => this.addBookingSpecs3(13)}>{this.state.room3[13]}</td>
+                            <td onClick={() => this.addBookingSpecs3(14)}>{this.state.room3[14]}</td>
+                            <td onClick={() => this.addBookingSpecs3(15)}>{this.state.room3[15]}</td>
+                            <td onClick={() => this.addBookingSpecs3(16)}>{this.state.room3[16]}</td>
+                            <td onClick={() => this.addBookingSpecs3(17)}>{this.state.room3[17]}</td>
+                            <td onClick={() => this.addBookingSpecs3(18)}>{this.state.room3[18]}</td>
+                        </tr>
+                    </tbody>
+                </Table>
+
             )
 
         } else {
-            return <BookingSpecs action={this.initialStateHandler}/>
+            // return <BookingSpecs action={this.initialStateHandler} />
+            return <BookingSpecs 
+                handleInputChange={this.handleInputChange} 
+                hideForm = {this.hideForm}
+            />
         }
 
     }
@@ -230,7 +362,7 @@ export default class DayCalendar extends Component {
 //           </tr>
 //         </tbody>
 //       </Table>
-   
+
 //     )
 // }
 
@@ -283,7 +415,7 @@ export default class DayCalendar extends Component {
 
 
 // const DayCalendar = () => {
-    
+
 //     let interval = 30; //minutes interval
 //     let times = []; // time array
 //     let startTime = 480; // start time
@@ -302,7 +434,7 @@ export default class DayCalendar extends Component {
 //         </div>
 
 //     )
-    
-    
+
+
 
 // }

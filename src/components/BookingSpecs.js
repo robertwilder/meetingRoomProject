@@ -3,48 +3,49 @@ import DayCalendar from './DayCalendar'
 
 export default class BookingSpecs extends Component {
 
-  state = {
-    dayCalendar : false,
-    button : true,
-    color : 'yellow',
-    colorTrue : false,
-    fullName : ""
-  }
+  // state = {
+  //   dayCalendar : false,
+  //   button : true,
+  //   color : 'yellow',
+  //   colorTrue : false,
+  //   fullName : ""
+  // }
   // onChange = () => {
   //   this.setState({ color : 'red'})
   // }
-  addDayCalendar = () => {
-    this.setState({dayCalendar : true, button : false, colorTrue : true})
-  }
-  initialStateHandler = () => {
-    this.setState({dayCalendar : false, button : true, colorTrue : false})
-  }
-  handleSubmit = (event) => {
-    event.preventDefault()
-    const data = this.state
-    console.log(data)
-  }
-  handleInputChange = (event) => {
-    event.preventDefault()
-    console.log(event)
-    console.log(event.target.name)
-    console.log(event.target.value)
-    this.setState({[event.target.name]: event.target.value})
+  // addDayCalendar = () => {
+  //   this.setState({dayCalendar : true, button : false, colorTrue : true})
+  // }
+  // initialStateHandler = () => {
+  //   this.setState({dayCalendar : false, button : true, colorTrue : false})
+  // }
+  // handleSubmit = (event) => {
+  //   event.preventDefault()
+  //   const data = this.state
+  //   console.log(data)
+  // }
+  // handleInputChange = (event) => {
+  //   event.preventDefault()
+  //   console.log(event)
+  //   console.log(event.target.name)
+  //   console.log(event.target.value)
+  //   this.setState({[event.target.name]: event.target.value})
 
-  }
+  // }
+  
 
   render() {
-    const {fullName} = this.state
+    // const {fullName} = this.state
 
-    if (this.state.button === true) {
+    // if (this.state.button === true) {
 
 
       return <div>
       <form onSubmit={this.handleSubmit}>
        <h1>Hello</h1>
-       <p>Enter your name: {fullName}</p>
+       <p>Enter your name:</p>
        <input
-         type="text" placeholder="Your Name" name="fullName" onChange={this.handleInputChange}
+         type="text" placeholder="Your Name" name="fullName" onChange={this.props.handleInputChange}
        />
        {/* <p>Name of the meeting:</p>
         <input
@@ -59,19 +60,19 @@ export default class BookingSpecs extends Component {
          type="text"
        /> */}
       </form>
-      <button onClick={this.addDayCalendar} >Confirm</button>
-      </div>
-
-    } else {
-    
-      return <div style={{ backgroundColor: this.state.color }} 
-      ><DayCalendar action={this.initialStateHandler}/>
+      <button onClick={this.props.hideForm} >Confirm</button>
       </div>
     }
+    // } else {
+    
+    //   return <div style={{ backgroundColor: this.state.color }} 
+    //   ><DayCalendar action={this.initialStateHandler}/>
+    //   </div>
+    // }
   }
 
 
-}
+
 
 // for the color change
 {/* <div style={{ backgroundColor: this.state.color }} 
