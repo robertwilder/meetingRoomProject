@@ -4,6 +4,7 @@ import BookingSpecs from './BookingSpecs'
 import React, {Component} from 'react'
 
 
+
 export default class DayCalendar extends Component {
 
     state = {
@@ -53,6 +54,7 @@ export default class DayCalendar extends Component {
           <tr>
             <td >Room 1</td>
             <td onClick={this.addBookingSpecs}>Mark</td>
+            {/* <td onClick={() => this.addBookingSpecs()}>Mark</td> */}
             <td onClick={this.addBookingSpecs}>Otto</td>
             <td onClick={this.addBookingSpecs}>@mdo</td>
             <td onClick={this.addBookingSpecs}></td>
