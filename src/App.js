@@ -5,6 +5,7 @@ import DayCalendar from './components/DayCalendar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import {Button} from 'react-bootstrap'
 //import DateSystem from './DateSystem';
+import './App.css';
 
 class App extends Component{
   state = {

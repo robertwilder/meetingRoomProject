@@ -43,22 +43,23 @@ export default class BookingSpecs extends Component {
       return <div>
       <form onSubmit={this.handleSubmit}>
        <h1>Hello</h1>
-       <p>Enter your name:</p>
+       <p>Enter your full name:</p>
        <input
-         type="text" placeholder="Your Name" name="fullName" onChange={this.props.handleInputChange}
+      //  value={fullName}
+         type="text" placeholder="Your full name" name="fullName"  onChange={this.props.handleInputChange}
        />
-       {/* <p>Name of the meeting:</p>
+       <p>Name of the meeting:</p>
         <input
-         type="text"
+         type="text" name="meetingName"
        />
        <p>Number of people:</p>
         <input
-         type="text"
+         type="text" name="numberOfPeople"
        />
        <p>Duration:</p>
         <input
-         type="text"
-       /> */}
+         type="text" name="duration"
+       />
       </form>
       <button onClick={this.props.hideForm} >Confirm</button>
       </div>
