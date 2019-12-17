@@ -5,3 +5,26 @@
 .backgroundActive {
   background-color: red;
 }
+
+ul {
+  list-style: none;
+}
+td {
+  height: 15vh;
+}
+li {
+  padding-right: 1vh;
+  margin-left: -4vh;
+}
+.pink {
+  background-color: rgb(245, 138, 156);
+  font-size: 3vh;
+}
+.blue {
+  background-color: rgb(78, 157, 248);
+  font-size: 3vh;
+}
+.orange {
+  background-color: rgb(241, 140, 8);
+  font-size: 3vh;
+}
