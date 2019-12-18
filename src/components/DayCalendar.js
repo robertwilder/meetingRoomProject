@@ -397,5 +397,3 @@ export default class DayCalendar extends Component {
     }
 
 }
-
-

@@ -24,6 +24,7 @@ li {
   background-color: rgba(78, 157, 248, 0.534);
   font-size: 2vh;
 }
+
 .thirdRow {
   background-color: rgba(241, 140, 8, 0.568);
   font-size: 2vh;
@@ -32,19 +33,22 @@ li {
   font-size: 2vh;
 
 }
+.column {
+  display: flex;
+}
+.pink {
+  background-color: rgba(245, 138, 156, 0.644);
+}
+.blue {
+  background-color: rgba(78, 157, 248, 0.534);
+}
+.orange {
+  background-color: rgba(241, 140, 8, 0.568);
+}
 
 @media only screen and (max-width: 450px) {
 
-  /* .dayCalendar {
-    display: flex;
-    flex-direction: column;
-  } */
 
-  /* .firstRow .secondRow .thirdRow {
-    display: flex;
-    flex-direction: column;
-   
-  } */
   .table {
     display: flex;
   }

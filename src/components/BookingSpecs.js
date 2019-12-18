@@ -37,5 +37,3 @@ export default class BookingSpecs extends Component {
     }
   
   }
-
-
