@@ -1,3 +1,74 @@
 .App {
   text-align: center;
 }
+
+.backgroundActive {
+  background-color: gray;
+}
+
+ul {
+  list-style: none;
+}
+td {
+  height: 15vh;
+}
+li {
+  padding-right: 1vh;
+  margin-left: -4vh;
+}
+.firstRow {
+  background-color: rgba(245, 138, 156, 0.644);
+  font-size: 2vh;
+}
+.secondRow {
+  background-color: rgba(78, 157, 248, 0.534);
+  font-size: 2vh;
+}
+.thirdRow {
+  background-color: rgba(241, 140, 8, 0.568);
+  font-size: 2vh;
+}
+.form {
+  font-size: 2vh;
+
+}
+
+@media only screen and (max-width: 450px) {
+
+  /* .dayCalendar {
+    display: flex;
+    flex-direction: column;
+  } */
+
+  /* .firstRow .secondRow .thirdRow {
+    display: flex;
+    flex-direction: column;
+   
+  } */
+  .table {
+    display: flex;
+  }
+  .times {
+    display: flex;
+    flex-direction: column;
+  }
+  .room1 {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5vh;
+
+  }
+  td {
+    display: flex;
+    flex-direction: column;
+    height: 6.26vh;
+    width: 80vw;
+  
+  }
+ ul {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+ }
+  
+}
