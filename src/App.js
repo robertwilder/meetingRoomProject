@@ -9,8 +9,13 @@ import './App.css';
 
 class App extends Component{
   state = {
-    
+
     date: new Date(),
+    tableName: [
+      {name: "Room 1"},
+      {name: "Room 2"},
+      {name: "Room 3"}
+    ]
   }
 
   onChange = (date) => {
@@ -33,7 +38,13 @@ class App extends Component{
                 />
             </div>
             <div>
-            <DayCalendar/>
+            <DayCalendar name={this.state.tableName[0].name}/>
+            </div>
+            <div>
+            <DayCalendar name={this.state.tableName[1].name}/>
+            </div>
+            <div>
+            <DayCalendar name={this.state.tableName[2].name}/>
             </div>
             
             <div>
