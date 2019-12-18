@@ -4,7 +4,11 @@ import {Link} from "react-router-dom"
 export default function Nav() {
     return(
         <div>
+<<<<<<< HEAD
         
+=======
+            <Link to="/">Home</Link>
+>>>>>>> master
             <Link to="/about">About</Link>
             <Link to="/calendar">Calendar</Link>
             <Link to="/bookingSystem">BookingSystem</Link>
