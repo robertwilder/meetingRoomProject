@@ -1,3 +1,30 @@
 .App {
   text-align: center;
 }
+
+.backgroundActive {
+  background-color: red;
+}
+
+ul {
+  list-style: none;
+}
+td {
+  height: 15vh;
+}
+li {
+  padding-right: 1vh;
+  margin-left: -4vh;
+}
+.firstRow {
+  background-color: rgba(245, 138, 156, 0.644);
+  font-size: 3vh;
+}
+.secondRow {
+  background-color: rgba(78, 157, 248, 0.534);
+  font-size: 3vh;
+}
+.thirdRow {
+  background-color: rgba(241, 140, 8, 0.568);
+  font-size: 3vh;
+}

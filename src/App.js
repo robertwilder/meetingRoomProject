@@ -5,10 +5,17 @@ import DayCalendar from './components/DayCalendar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import {Button} from 'react-bootstrap'
 //import DateSystem from './DateSystem';
+import './App.css';
 
 class App extends Component{
   state = {
+
     date: new Date(),
+    tableName: [
+      {name: "Room 1"},
+      {name: "Room 2"},
+      {name: "Room 3"}
+    ]
   }
 
   onChange = (date) => {
@@ -30,8 +37,14 @@ class App extends Component{
                   value={this.state.date}
                 />
             </div>
-            <div>
-            <DayCalendar/>
+            <div className='firstRow'>
+            <DayCalendar name={this.state.tableName[0].name}/>
+            </div>
+            <div className='secondRow'>
+            <DayCalendar name={this.state.tableName[1].name}/>
+            </div>
+            <div className='thirdRow'>
+            <DayCalendar name={this.state.tableName[2].name}/>
             </div>
             
             <div>
