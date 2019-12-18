@@ -74,5 +74,14 @@ li {
    flex-direction: row;
    justify-content: space-evenly;
  }
+ .calendar {
+   margin-right: 5vh;
+   
+ }
   
 }
+
+.calendar {
+  margin-left: 80px;
+}
+

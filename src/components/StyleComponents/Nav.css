@@ -1,0 +1,26 @@
+.navBar {
+    display: flex;
+    margin: 5px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.Link {
+    padding: 1.5vh;
+    background: rgb(209, 216, 215);
+    margin: 1vh;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 450px) {
+    .navBar {
+        display: flex;
+        font-size: 1.5vh;
+        
+       
+    }
+    .Link {
+        padding: 0.8vh;
+        margin: 0.5vh;
+    }
+}

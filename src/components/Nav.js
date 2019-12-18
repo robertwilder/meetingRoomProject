@@ -1,14 +1,25 @@
 import React from 'react'
 import {Link} from "react-router-dom"
+import './StyleComponents/Nav.css'
 
 export default function Nav() {
     return(
-        <div>
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-            <Link to="/calendar">Calendar</Link>
-            <Link to="/bookingSystem">BookingSystem</Link>
-            <Link to="/facilities">Facilities</Link>
+        <div className="navBar">
+            <div>
+            <Link to="/" className="Link">Home</Link>
+            </div>
+            <div>
+            <Link to="/about" className="Link">About</Link>
+            </div>
+            <div>
+            <Link to="/calendar" className="Link">Calendar</Link>
+            </div>
+            <div>
+            <Link to="/bookingSystem" className="Link">BookingSystem</Link>
+            </div>
+            <div>
+            <Link to="/facilities" className="Link">Facilities</Link>
+            </div>
         </div>
     )
 }

@@ -11,14 +11,16 @@ class App extends React.Component{
   render() {
     return(
     <BrowserRouter>
-      <div>
+      <div className="all">
         <h1>Welcome to our booking System</h1>
         <div>
         <Nav/>
         <Switch>
           <Route exact path="/"/>
           <Route path="/calendar">
-            <Calendar/>
+          <div className="calendar">
+            <Calendar />
+          </div>
           </Route>
           <Route path="/bookingSystem">
             <BookingSystem/>
