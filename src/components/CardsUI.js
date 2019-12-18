@@ -17,8 +17,7 @@ export default function Card (props) {
                 <p className="projector" id="projector">{ projector }</p>
                 <p className="phone" id="phone">{ phone }</p>
                 <p className="wheelChair" id="wheelchairAccess">{ wheelchair }</p>
-                <p className="occupied" id="occupied">{ occupied }</p>
-                <a href="#" className="pink-button"><button id="button">Button</button></a>
+               
             </div>
             </div>
     )
