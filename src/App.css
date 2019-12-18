@@ -16,15 +16,15 @@ li {
   padding-right: 1vh;
   margin-left: -4vh;
 }
-.pink {
-  background-color: rgb(245, 138, 156);
+.firstRow {
+  background-color: rgba(245, 138, 156, 0.644);
   font-size: 3vh;
 }
-.blue {
-  background-color: rgb(78, 157, 248);
+.secondRow {
+  background-color: rgba(78, 157, 248, 0.534);
   font-size: 3vh;
 }
-.orange {
-  background-color: rgb(241, 140, 8);
+.thirdRow {
+  background-color: rgba(241, 140, 8, 0.568);
   font-size: 3vh;
 }
