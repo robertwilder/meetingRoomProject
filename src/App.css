@@ -3,7 +3,7 @@
 }
 
 .backgroundActive {
-  background-color: red;
+  background-color: gray;
 }
 
 ul {
@@ -30,4 +30,45 @@ li {
 }
 .form {
   font-size: 2vh;
+
+}
+
+@media only screen and (max-width: 450px) {
+
+  /* .dayCalendar {
+    display: flex;
+    flex-direction: column;
+  } */
+
+  /* .firstRow .secondRow .thirdRow {
+    display: flex;
+    flex-direction: column;
+   
+  } */
+  .table {
+    display: flex;
+  }
+  .times {
+    display: flex;
+    flex-direction: column;
+  }
+  .room1 {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5vh;
+
+  }
+  td {
+    display: flex;
+    flex-direction: column;
+    height: 6.26vh;
+    width: 80vw;
+  
+  }
+ ul {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+ }
+  
 }

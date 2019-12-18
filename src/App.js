@@ -30,13 +30,13 @@ class App extends Component{
     
       <div className="App">
         <h1>Welcome to our booking System</h1>
-          <div>
-            {/* this need review  */}
+          {/* <div>
               <Calendar
                   onChange={this.onChange}
                   value={this.state.date}
                 />
-            </div>
+            </div> */}
+            <div className='dayCalendar'>
             <div className='firstRow'>
             <DayCalendar name={this.state.tableName[0].name}/>
             </div>
@@ -45,6 +45,7 @@ class App extends Component{
             </div>
             <div className='thirdRow'>
             <DayCalendar name={this.state.tableName[2].name}/>
+            </div>
             </div>
             
             <div>

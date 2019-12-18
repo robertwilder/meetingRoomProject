@@ -19,7 +19,6 @@ export default class DayCalendar extends Component {
         meetingName: '',
         numberOfPeople: "",
         duration:'',
-
         room1: [
             {
                 fullName: "",
@@ -147,7 +146,7 @@ export default class DayCalendar extends Component {
             currentTime: slotIndex,
             currentRoom: room,
             showForm: true,
-            background: true,
+            
         });
     }
 
@@ -204,11 +203,20 @@ export default class DayCalendar extends Component {
       
         if (!this.state.showForm) {
 
+            // const inputStyle = {
+            //     backgroundColor : ''
+            // }
+            // if { this.state.fullName.lenght > 1} (
+            //     inputStyle = {
+            //         backgroundColor: 'red'
+            //     }
+            // )
+
             return (
-                <Table striped bordered>
+                <Table striped bordered className='table'>
                     <thead>
                         <tr className="times">
-                            <th></th>
+                            <th>Time</th>
                             <th>8:00</th>
                             <th>8:30</th>
                             <th>9:00</th>
@@ -233,7 +241,7 @@ export default class DayCalendar extends Component {
                     <tbody>
                         <tr className="room1">
                             <td>{this.props.name}</td>
-                            <td onClick={() => this.addBookingSpecs(0, 'room1')} class={(this.state.currentTime === 0) ? 'backgroundActive' : ""}>
+                            <td onClick={() => this.addBookingSpecs(0, 'room1')} class={(this.state.room1[0].fullName !== "") ? 'backgroundActive' : ""}>
                             
                             
                             <ul>
@@ -244,7 +252,7 @@ export default class DayCalendar extends Component {
                             </ul>
                             
                             </td>
-                            <td onClick={() => this.addBookingSpecs(1, 'room1')} class={(this.state.currentTime === 1) ? 'backgroundActive' : ""} >
+                            <td onClick={() => this.addBookingSpecs(1, 'room1')} class={(this.state.room1[1].fullName !== "") ? 'backgroundActive' : ""} >
                             <ul>
                                 <li>{this.state.room1[1].fullName}</li>
                                 <li>{this.state.room1[1].meetingName}</li>
@@ -252,119 +260,119 @@ export default class DayCalendar extends Component {
                                 <li>{this.state.room1[1].duration}</li>
                             </ul>
                             </td>
-                            <td onClick={() => this.addBookingSpecs(2, 'room1')} class={(this.state.currentTime === 2) ? 'backgroundActive' : ""}>
+                            <td onClick={() => this.addBookingSpecs(2, 'room1')} class={(this.state.room1[2].fullName !== "") ? 'backgroundActive' : ""}>
                             <ul>
                                 <li>{this.state.room1[2].fullName}</li>
                                 <li>{this.state.room1[2].meetingName}</li>
                                 <li>{this.state.room1[2].numberOfPeople}</li>
                                 <li>{this.state.room1[2].duration}</li>
                             </ul></td>
-                            <td onClick={() => this.addBookingSpecs(3, 'room1')} class={(this.state.currentTime === 3) ? 'backgroundActive' : ""}>
+                            <td onClick={() => this.addBookingSpecs(3, 'room1')} class={(this.state.room1[3].fullName !== "") ? 'backgroundActive' : ""}>
                             <ul>
                                 <li>{this.state.room1[3].fullName}</li>
                                 <li>{this.state.room1[3].meetingName}</li>
                                 <li>{this.state.room1[3].numberOfPeople}</li>
                                 <li>{this.state.room1[3].duration}</li>
                             </ul></td>
-                            <td onClick={() => this.addBookingSpecs(4, 'room1')} class={(this.state.currentTime === 4) ? 'backgroundActive' : ""}>
+                            <td onClick={() => this.addBookingSpecs(4, 'room1')} class={(this.state.room1[4].fullName !== "") ? 'backgroundActive' : ""}>
                             <ul>
                                 <li>{this.state.room1[4].fullName}</li>
                                 <li>{this.state.room1[4].meetingName}</li>
                                 <li>{this.state.room1[4].numberOfPeople}</li>
                                 <li>{this.state.room1[4].duration}</li>
                             </ul></td>
-                            <td onClick={() => this.addBookingSpecs(5, 'room1')} class={(this.state.currentTime === 5) ? 'backgroundActive' : ""}>
+                            <td onClick={() => this.addBookingSpecs(5, 'room1')} class={(this.state.room1[5].fullName !== "") ? 'backgroundActive' : ""}>
                             <ul>
                                 <li>{this.state.room1[5].fullName}</li>
                                 <li>{this.state.room1[5].meetingName}</li>
                                 <li>{this.state.room1[5].numberOfPeople}</li>
                                 <li>{this.state.room1[5].duration}</li>
                             </ul></td>
-                            <td onClick={() => this.addBookingSpecs(6, 'room1')} class={(this.state.currentTime === 6) ? 'backgroundActive' : ""}>
+                            <td onClick={() => this.addBookingSpecs(6, 'room1')} class={(this.state.room1[6].fullName !== "") ? 'backgroundActive' : ""}>
                             <ul>
                                 <li>{this.state.room1[6].fullName}</li>
                                 <li>{this.state.room1[6].meetingName}</li>
                                 <li>{this.state.room1[6].numberOfPeople}</li>
                                 <li>{this.state.room1[6].duration}</li>
                             </ul></td>
-                            <td onClick={() => this.addBookingSpecs(7, 'room1')} class={(this.state.currentTime === 7 ) ? 'backgroundActive' : ""}>
+                            <td onClick={() => this.addBookingSpecs(7, 'room1')} class={(this.state.room1[7].fullName !== "") ? 'backgroundActive' : ""}>
                             <ul>
                                 <li>{this.state.room1[7].fullName}</li>
                                 <li>{this.state.room1[7].meetingName}</li>
                                 <li>{this.state.room1[7].numberOfPeople}</li>
                                 <li>{this.state.room1[7].duration}</li>
                             </ul></td>
-                            <td onClick={() => this.addBookingSpecs(8, 'room1')} class={(this.state.currentTime === 8) ? 'backgroundActive' : ""}>
+                            <td onClick={() => this.addBookingSpecs(8, 'room1')} class={(this.state.room1[8].fullName !== "") ? 'backgroundActive' : ""}>
                             <ul>
                                 <li>{this.state.room1[8].fullName}</li>
                                 <li>{this.state.room1[8].meetingName}</li>
                                 <li>{this.state.room1[8].numberOfPeople}</li>
                                 <li>{this.state.room1[8].duration}</li>
                             </ul></td>
-                            <td onClick={() => this.addBookingSpecs(9, 'room1')} class={(this.state.currentTime === 9) ? 'backgroundActive' : ""}>
+                            <td onClick={() => this.addBookingSpecs(9, 'room1')} class={(this.state.room1[9].fullName !== "") ? 'backgroundActive' : ""}>
                             <ul>
                                 <li>{this.state.room1[9].fullName}</li>
                                 <li>{this.state.room1[9].meetingName}</li>
                                 <li>{this.state.room1[9].numberOfPeople}</li>
                                 <li>{this.state.room1[9].duration}</li>
                             </ul></td>
-                            <td onClick={() => this.addBookingSpecs(10, 'room1')} class={(this.state.currentTime === 10) ? 'backgroundActive' : ""}>
+                            <td onClick={() => this.addBookingSpecs(10, 'room1')} class={(this.state.room1[10].fullName !== "") ? 'backgroundActive' : ""}>
                             <ul>
                                 <li>{this.state.room1[10].fullName}</li>
                                 <li>{this.state.room1[10].meetingName}</li>
                                 <li>{this.state.room1[10].numberOfPeople}</li>
                                 <li>{this.state.room1[10].duration}</li>
                             </ul></td>
-                            <td onClick={() => this.addBookingSpecs(11, 'room1')} class={(this.state.currentTime === 11) ? 'backgroundActive' : ""}>
+                            <td onClick={() => this.addBookingSpecs(11, 'room1')} class={(this.state.room1[11].fullName !== "") ? 'backgroundActive' : ""}>
                             <ul>
                                 <li>{this.state.room1[11].fullName}</li>
                                 <li>{this.state.room1[11].meetingName}</li>
                                 <li>{this.state.room1[11].numberOfPeople}</li>
                                 <li>{this.state.room1[11].duration}</li>
                             </ul></td>
-                            <td onClick={() => this.addBookingSpecs(12, 'room1')} class={(this.state.currentTime === 12) ? 'backgroundActive' : ""}>
+                            <td onClick={() => this.addBookingSpecs(12, 'room1')} class={(this.state.room1[12].fullName !== "") ? 'backgroundActive' : ""}>
                             <ul>
                                 <li>{this.state.room1[12].fullName}</li>
                                 <li>{this.state.room1[12].meetingName}</li>
                                 <li>{this.state.room1[12].numberOfPeople}</li>
                                 <li>{this.state.room1[12].duration}</li>
                             </ul></td>
-                            <td onClick={() => this.addBookingSpecs(13, 'room1')} class={(this.state.currentTime === 13) ? 'backgroundActive' : ""}>
+                            <td onClick={() => this.addBookingSpecs(13, 'room1')} class={(this.state.room1[13].fullName !== "") ? 'backgroundActive' : ""}>
                             <ul>
                                 <li>{this.state.room1[13].fullName}</li>
                                 <li>{this.state.room1[13].meetingName}</li>
                                 <li>{this.state.room1[13].numberOfPeople}</li>
                                 <li>{this.state.room1[13].duration}</li>
                             </ul></td>
-                            <td onClick={() => this.addBookingSpecs(14, 'room1')} class={(this.state.currentTime === 14) ? 'backgroundActive' : ""}>
+                            <td onClick={() => this.addBookingSpecs(14, 'room1')} class={(this.state.room1[14].fullName !== "") ? 'backgroundActive' : ""}>
                             <ul>
                                 <li>{this.state.room1[14].fullName}</li>
                                 <li>{this.state.room1[14].meetingName}</li>
                                 <li>{this.state.room1[14].numberOfPeople}</li>
                                 <li>{this.state.room1[14].duration}</li>
                             </ul></td>
-                            <td onClick={() => this.addBookingSpecs(15, 'room1')} class={(this.state.currentTime === 15) ? 'backgroundActive' : ""}>
+                            <td onClick={() => this.addBookingSpecs(15, 'room1')} class={(this.state.room1[15].fullName !== "") ? 'backgroundActive' : ""}>
                             <ul>
                                 <li>{this.state.room1[15].fullName}</li>
                                 <li>{this.state.room1[15].meetingName}</li>
                                 <li>{this.state.room1[15].numberOfPeople}</li>
                                 <li>{this.state.room1[15].duration}</li>
                             </ul></td>
-                            <td onClick={() => this.addBookingSpecs(16, 'room1')} class={(this.state.currentTime === 16) ? 'backgroundActive' : ""}>
+                            <td onClick={() => this.addBookingSpecs(16, 'room1')} class={(this.state.room1[16].fullName !== "") ? 'backgroundActive' : ""}>
                             <ul>
                                 <li>{this.state.room1[16].fullName}</li>
                                 <li>{this.state.room1[16].meetingName}</li>
                                 <li>{this.state.room1[16].numberOfPeople}</li>
                                 <li>{this.state.room1[16].duration}</li>
                             </ul></td>
-                            <td onClick={() => this.addBookingSpecs(17, 'room1')} class={(this.state.currentTime === 17) ? 'backgroundActive' : ""}>
+                            <td onClick={() => this.addBookingSpecs(17, 'room1')} class={(this.state.room1[17].fullName !== "") ? 'backgroundActive' : ""}>
                             <ul>
                                 <li>{this.state.room1[17].fullName}</li>
                                 <li>{this.state.room1[17].meetingName}</li>
                                 <li>{this.state.room1[17].numberOfPeople}</li>
                                 <li>{this.state.room1[17].duration}</li>
                             </ul></td>
-                            <td onClick={() => this.addBookingSpecs(18, 'room1')} class={(this.state.currentTime === 18) ? 'backgroundActive' : ""}>
+                            <td onClick={() => this.addBookingSpecs(18, 'room1')} class={(this.state.room1[18].fullName !== "") ? 'backgroundActive' : ""}>
                             <ul>
                                 <li>{this.state.room1[18].fullName}</li>
                                 <li>{this.state.room1[18].meetingName}</li>

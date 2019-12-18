@@ -12,9 +12,9 @@ export default class BookingSpecs extends Component {
       <form className='form' onSubmit={this.handleSubmit}>
        <h1>Hello! Let us know some details</h1>
        <p></p>
-       <div className='input1'>
+       <div className='input1' >
        <input
-      //  value={fullName}
+      //  value={fullName}   style={inputStyle} 
          type="text" placeholder="Your full name:" name="fullName" value={this.props.fullname}  onChange={this.props.handleInputChange}
        />
        </div>
@@ -32,7 +32,7 @@ export default class BookingSpecs extends Component {
        />
 
       </form>
-      <button onClick={this.props.hideForm} >Confirm</button>
+      <button onClick={this.props.hideForm} style={{backgroundColor: "gray"}}>Confirm</button>
       </div>
     }
   
