@@ -1,0 +1,13 @@
+.navBar {
+    display: flex;
+    margin: 5px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.Link {
+    padding: 15px;
+    background: rgb(209, 216, 215);
+    margin: 5px;
+    border-radius: 10px;
+}
