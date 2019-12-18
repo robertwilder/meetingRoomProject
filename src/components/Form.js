@@ -29,6 +29,10 @@ export default class Form extends Component {
 
     if (this.state.button === true) {
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> da2e7e144ca0b3dab56eb1dd28a900ad9d65bc5c
       return <div>
       <form onSubmit={this.handleSubmit}>
        <h1>Hello</h1>
@@ -59,4 +63,11 @@ export default class Form extends Component {
       </div>
     }
   }
+<<<<<<< HEAD
 }
+=======
+
+
+}
+
+>>>>>>> da2e7e144ca0b3dab56eb1dd28a900ad9d65bc5c

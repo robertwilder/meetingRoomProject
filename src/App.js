@@ -13,7 +13,7 @@ class App extends React.Component{
     <BrowserRouter>
       <div>
         <h1>Welcome to our booking System</h1>
-        <Nav/ >
+        <Nav/>
         <Switch>
           <Route exact path="/"/>
           <Route path="/calendar">
@@ -25,13 +25,10 @@ class App extends React.Component{
           <Route path="/facilities">
             <Cards/>
           </Route>
-
         </Switch>
-
       </div>
     </BrowserRouter>
     )
   }
-
 }
 export default App;
