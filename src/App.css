@@ -1,6 +1,9 @@
 .App {
   text-align: center;
 }
+.h1 {
+  text-align: center;
+}
 
 .backgroundActive {
   background-color: gray;
@@ -24,6 +27,7 @@ li {
   background-color: rgba(78, 157, 248, 0.534);
   font-size: 2vh;
 }
+
 .thirdRow {
   background-color: rgba(241, 140, 8, 0.568);
   font-size: 2vh;
@@ -32,19 +36,46 @@ li {
   font-size: 2vh;
 
 }
+.column {
+  display: flex;
+}
+.pink {
+  background-color: rgba(245, 138, 156, 0.644);
+}
+.blue {
+  background-color: rgba(78, 157, 248, 0.534);
+}
+.orange {
+  background-color: rgba(241, 140, 8, 0.568);
+}
+.newsInfo {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  
+}
 
+.newsCard {
+  text-align: center;
+}
+.system, .jumper, .color {
+ margin-bottom: 5vh;
+ margin-left: 60vh;
+}
+
+.navNav {
+  display: flex;
+  align-items: center;
+  margin-top: 3vh;
+  margin-bottom: 5vh;
+}
+
+.roomName {
+  font-size: 3vh;
+}
 @media only screen and (max-width: 450px) {
 
-  /* .dayCalendar {
-    display: flex;
-    flex-direction: column;
-  } */
 
-  /* .firstRow .secondRow .thirdRow {
-    display: flex;
-    flex-direction: column;
-   
-  } */
   .table {
     display: flex;
   }
@@ -70,7 +101,29 @@ li {
    flex-direction: row;
    justify-content: space-evenly;
  }
+ .calendar {
+   margin-right: 5vh;
+   
+ }
+ .system, .jumper, .color {
+  margin-bottom: 5vh;
+  margin-left: 0vh;
+ }
+ .newsCard {
+  text-align: center
+}
+.newsInfo {
+  display: unset;
   
+}
+p {
+  padding-right: 4vh;
+}
+.navNav {
+  margin-top: 3vh;
+  margin-bottom: 1vh;
+}
+
 }
 
 .calendar {

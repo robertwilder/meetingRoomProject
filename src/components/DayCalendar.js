@@ -240,7 +240,7 @@ export default class DayCalendar extends Component {
                     </thead>
                     <tbody>
                         <tr className="room1">
-                            <td>{this.props.name}</td>
+                            <td className="roomName">{this.props.name}</td>
                             <td onClick={() => this.addBookingSpecs(0, 'room1')} class={(this.state.room1[0].fullName !== "") ? 'backgroundActive' : ""}>
                             
                             

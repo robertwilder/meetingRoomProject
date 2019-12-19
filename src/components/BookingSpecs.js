@@ -10,7 +10,7 @@ export default class BookingSpecs extends Component {
 
       return <div>
       <form className='form' onSubmit={this.handleSubmit}>
-       <h1>Hello! Let us know some details</h1>
+       <h1>Hello! Let us know some details:</h1>
        <p></p>
        <div className='input1' >
        <input
@@ -28,7 +28,7 @@ export default class BookingSpecs extends Component {
        />
        <p></p>
         <input
-         type="text" placeholder='Duration:' name="duration" value={this.props.duration}  onChange={this.props.handleInputChange}
+         type="text" placeholder='Duration: min\h' name="duration" value={this.props.duration}  onChange={this.props.handleInputChange}
        />
 
       </form>
