@@ -6,7 +6,6 @@ import Nav from './components/Nav'
 import Calendar from 'react-calendar';
 import BookingSystem from './BookingSystem';
 import Home from './components/NewsCard'
-import NewsCard from './components/NewsCard';
 import NewsInfo from './components/NewsInfo';
 
 

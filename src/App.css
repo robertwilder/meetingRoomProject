@@ -52,7 +52,6 @@ li {
   display: flex;
   flex-direction: column;
   width: 60vw;
-  /* justify-content: center; */
   
 }
 
@@ -116,8 +115,6 @@ li {
 .newsInfo {
   display: unset;
   
-  /* justify-content: center; */
-  
 }
 p {
   padding-right: 4vh;
@@ -126,6 +123,7 @@ p {
   margin-top: 3vh;
   margin-bottom: 1vh;
 }
+
 }
 
 .calendar {
