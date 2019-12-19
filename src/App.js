@@ -6,6 +6,8 @@ import Nav from './components/Nav'
 import Calendar from 'react-calendar';
 import BookingSystem from './BookingSystem';
 import Cards from './components/Cards'
+import About from './components/About'
+import Facilities from './components/Facilities'
 
 class App extends React.Component{
   render() {
@@ -16,6 +18,9 @@ class App extends React.Component{
         <Nav/>
         <Switch>
           <Route exact path="/"/>
+          <Route path="/about">
+              <About/>
+          </Route>
           <Route path="/calendar">
           <div className="calendar">
             <Calendar />
@@ -25,7 +30,7 @@ class App extends React.Component{
             <BookingSystem/>
           </Route>
           <Route path="/facilities">
-            <Cards/>
+            <Facilities/>
           </Route>
         </Switch>
       </div>
