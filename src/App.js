@@ -5,19 +5,26 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import Nav from './components/Nav'
 import Calendar from 'react-calendar';
 import BookingSystem from './BookingSystem';
-import Cards from './components/Cards'
-import CardsInfoSystem from './CardsInfoSystem';
+import Home from './components/NewsCard'
+import NewsCard from './components/NewsCard';
+import NewsInfo from './components/NewsInfo';
+
+
 
 class App extends React.Component{
   render() {
     return(
     <BrowserRouter>
       <div className="all">
+      <div className='h1'>
         <h1>Welcome to our booking System</h1>
+        </div>
         <div>
+        <div className="navNav">
         <Nav/>
+        </div>
         <Switch>
-          <Route exact path="/"/>
+          <Route exact path="/" render={()=> <NewsInfo/>}/>
           <Route path="/calendar">
           <div className="calendar">
             <Calendar />
@@ -27,7 +34,7 @@ class App extends React.Component{
             <BookingSystem/>
           </Route>
           <Route path="/facilities">
-            <CardsInfoSystem/>
+            {/* <CardsInfoSystem/> */}
           </Route>
         </Switch>
         </div>

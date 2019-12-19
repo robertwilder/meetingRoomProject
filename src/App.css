@@ -1,7 +1,9 @@
 .App {
   text-align: center;
 }
-
+.h1 {
+  text-align: center;
+}
 
 .backgroundActive {
   background-color: gray;
@@ -46,7 +48,32 @@ li {
 .orange {
   background-color: rgba(241, 140, 8, 0.568);
 }
+.newsInfo {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  /* justify-content: center; */
+  
+}
 
+.newsCard {
+  text-align: center;
+}
+.system, .jumper, .color {
+ margin-bottom: 5vh;
+ margin-left: 60vh;
+}
+
+.navNav {
+  display: flex;
+  align-items: center;
+  margin-top: 3vh;
+  margin-bottom: 5vh;
+}
+
+.roomName {
+  font-size: 3vh;
+}
 @media only screen and (max-width: 450px) {
 
 
@@ -79,7 +106,26 @@ li {
    margin-right: 5vh;
    
  }
+ .system, .jumper, .color {
+  margin-bottom: 5vh;
+  margin-left: 0vh;
+ }
+ .newsCard {
+  text-align: center
+}
+.newsInfo {
+  display: unset;
   
+  /* justify-content: center; */
+  
+}
+p {
+  padding-right: 4vh;
+}
+.navNav {
+  margin-top: 3vh;
+  margin-bottom: 1vh;
+}
 }
 
 .calendar {

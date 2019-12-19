@@ -6,7 +6,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 //import DateSystem from './DateSystem';
 import './App.css';
 import CardsInfo from './components/CardsInfo'
-// import CardsInfoSystem from './CardsInfoSystem'
 
 class BookingSystem extends Component{
   state = {
