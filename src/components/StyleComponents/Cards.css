@@ -7,7 +7,7 @@
 .Orange {
     background-color: rgba(241, 140, 8, 0.568);
 }
-.Box {
+/* .Box {
     border: solid;
     flex-direction: row;
     padding: 2vh;
@@ -15,8 +15,18 @@
     border-radius: 10px;
     border-width: 1px;
     
+} */
+.card-body {
+    display: flex;
+    justify-content: center;
 }
-
+.card-body p {
+    margin-left: 5vh;
+}
+.Box {
+    margin-top: -2vh;
+    margin-bottom: 2vh;
+}
 .column {
     display: flex;
 
@@ -27,5 +37,14 @@
     .column {
         display: flex;
         flex-direction: column;
+    }
+    .card-body {
+        display: flex;
+        justify-content: center;
+
+    }
+    .card-body p {
+        margin-left: 1vh;
+        font-size: 1.5vh;
     }
 }

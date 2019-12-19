@@ -6,6 +6,7 @@ import Nav from './components/Nav'
 import Calendar from 'react-calendar';
 import BookingSystem from './BookingSystem';
 import Cards from './components/Cards'
+import CardsInfoSystem from './CardsInfoSystem';
 
 class App extends React.Component{
   render() {
@@ -26,7 +27,7 @@ class App extends React.Component{
             <BookingSystem/>
           </Route>
           <Route path="/facilities">
-            <Cards/>
+            <CardsInfoSystem/>
           </Route>
         </Switch>
         </div>
