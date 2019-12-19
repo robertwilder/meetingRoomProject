@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../App.css';
-import './StyleComponents/Cards.css'
 
 
 export default function Card (props) {
@@ -8,24 +7,19 @@ export default function Card (props) {
         let projector = props.projector ? "true" : "false";
         let phone = props.phone ? "true" : "false";
         let wheelchair = props.wheelchair ? "true" : "false";
-      
+        let occupied = props.occupied ? "true" : "false";
 
     return(
-        <div className="Box">
+        <div style={{backgroundColor: props.colour}} className="card text-center">
             <div className="card-body">
-             
                 <h4 className="card-title"></h4>
-                
-              
-                <p className="items" id="people">{props.people} people capacity </p>
-               
-                <p className="projector" id="projector">Projector: { projector }</p>
-               
-                <p className="phone" id="phone">On site Telephone: { phone }</p>
-          
-                <p className="wheelChair" id="wheelchairAccess">Wheelchair Access: { wheelchair }</p>
-                
+                <p className="items" id="people">{props.people} people </p>
+                <p className="projector" id="projector">{ projector }</p>
+                <p className="phone" id="phone">{ phone }</p>
+                <p className="wheelChair" id="wheelchairAccess">{ wheelchair }</p>
+                <p className="occupied" id="occupied">{ occupied }</p>
+                <a href="#" className="pink-button"><button id="button">Button</button></a>
             </div>
-        </div>
+            </div>
     )
     };
